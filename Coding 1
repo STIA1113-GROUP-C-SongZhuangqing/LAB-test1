@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ass1 {
 public static void main(String[] args) {
 	int number,number1,number2,number3;
-	double price1,item1,price2,item2,price3,item3,total,finalprice,discount;
+	double price1,item1,price2,item2,price3,item3,total,finalprice,discount,received;
 	Scanner scan=new Scanner(System.in);
 	System.out.println("Enter the number of item:");
 	number=scan.nextInt();
@@ -29,18 +29,21 @@ public static void main(String[] args) {
 		total=item1+item2+item3;
 			if(total>100) {
 			discount=0.2;
-			finalprice=total*discount;
+			received=total*discount;
+			finalprice=total-received;
 			System.out.println("Total price:RM"+total);
-			System.out.println("Discount received:RM"+discount);
+			System.out.println("Discount received:RM"+received);
 			System.out.println("Price to be paid :RM"+finalprice);
 			}
 			else if(total<100) {
 				discount=0.1;
-				finalprice=total*discount;
+				received=total*discount;
+				finalprice=total-received;
 				System.out.println("Total price:"+total);
-				System.out.println("discount received:"+discount);
+				System.out.println("discount received:"+received);
 				System.out.println("Price to be paid :RM"+finalprice);
 			}
+			break;
 	case 2:
 		System.out.println("Enter the quantity of first item:");
 		number1=scan.nextInt();
@@ -57,18 +60,21 @@ public static void main(String[] args) {
 		total=item1+item2;
 		if(total>100) {
 		discount=0.2;
-		finalprice=total*discount;
+		received=total*discount;
+		finalprice=total-received;
 		System.out.println("Total price:"+total);
-		System.out.println("Discount received:RM"+discount);
+		System.out.println("Discount received:RM"+received);
 		System.out.println("Price to be paid :RM"+finalprice);
 		}
 		else if(total<100) {
 			discount=0.1;
-			finalprice=total*discount;
+			received=total*discount;
+			finalprice=total-received;
 			System.out.println("Total price:"+total);
-			System.out.println("Discount received:RM"+discount);
+			System.out.println("Discount received:RM"+received);
 			System.out.println("Price to be paid :RM"+finalprice);
 		}
+		break;
 	case 1:
 		System.out.println("Enter the number of item:");
 		number1=scan.nextInt();
@@ -78,19 +84,23 @@ public static void main(String[] args) {
 		total=item1;
 		if(total>100) {
 			discount=0.2;
-			finalprice=total*discount;
+			received=total*discount;
+			finalprice=total-received;
 			System.out.println("Total price:"+total);
-			System.out.println("Discount received:RM"+discount);
+			System.out.println("Discount received:RM"+received);
 			System.out.println("Price to be paid :RM"+finalprice);
 			}
 		else if(total<100) {
 			discount=0.1;
-			finalprice=total*discount;
+			received=total*discount;
+			finalprice=total-received;
 			System.out.println("Total price:"+total);
-			System.out.println("Discount received:RM"+discount);
+			System.out.println("Discount received:RM"+received);
 			System.out.println("Price to be paid :RM"+finalprice);
 		}
+		break;
 	}
 	
 }
 }
+
