@@ -1,0 +1,32 @@
+package quiz1;
+import java.util.Scanner;
+public class ass2 {
+	public static void main(String[] args) {
+	Scanner scan=new Scanner(System.in);
+	double basewages,com,hour,sale,total;
+	System.out.println("Enter sales:RM");
+	sale=scan.nextDouble();
+	System.out.println("Enter hours worked:");
+	hour=scan.nextDouble();
+	if(sale>=150&&sale<=300) {
+		com=sale*0.05;
+		basewages=hour*5;
+		total=com+basewages;
+		System.out.println("Commission:RM"+com);
+		System.out.println("Daily wages:RM"+total);
+	}else if(sale>300&&sale<=500) {
+		com=sale*0.1;
+		basewages=hour*5;
+		total=com+basewages;
+		System.out.println("Commission:RM"+com);
+		System.out.println("Daily wages:RM"+total);
+	}else if(sale>500) {
+		com=sale*0.15;
+		basewages=hour*5;
+		total=com+basewages;
+		System.out.println("Commission:RM"+com);
+		System.out.println("Daily wages:RM"+total);
+	}
+	
+}
+}
